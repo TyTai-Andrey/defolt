@@ -3,7 +3,147 @@
 @import "fonts";
 
 
+*
+{
+	font-family: Roboto;
+	font-size: 14px;
+	color: #121920;
+	font-weight: 400;
+}
 
+h1
+{
+	line-height: 57.6px;
+	font-weight: 500;
+	font-size: 36px;
+	text-transform: uppercase;
+}
+
+.color_grey
+{
+	color: #bbc4d6;
+	line-height: 22.4px;
+}
+
+.main_wrapper
+{
+	max-width: 1010px;
+	height: 100vh;
+	margin: 0 auto;
+	padding: 0 135px;
+
+	.header
+	{
+		width: 100%;
+		height: 140px;
+		margin: 0 auto;
+		&_top
+		{
+			height: 80px;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			// justify-content: space-between;
+			.logo
+			{
+				height: 30px;
+				width: 135px;
+				margin-top: 25px;
+				margin-right: 50px;
+			}
+			.search
+			{
+				margin-top: 20px;
+				max-width: 500px;
+				min-width: 175px;
+				width: 100%;
+				// width: 160px;
+				height: 40px;
+				.search_box
+				{
+					position: relative;
+					width: 100%;
+					height: 40px;
+					input	
+					{
+						width: 100%;
+						height: 36px;
+						position: relative;
+						border: 1px solid #34AADD;
+						// border: 0;
+						border-radius: 5px;
+						padding: 0;
+					}
+					.search_group
+					{
+						position: absolute;
+						width: 100%;
+						height: 40px;
+						display: flex;
+						justify-content: space-between;
+						z-index: 1;
+						.search_text
+						{
+							height: 22px;
+							padding-top: 9px;
+							padding-left: 20px;
+						}
+						.search_icon
+						{
+							padding-top: 12px;
+							padding-right: 12.21px;
+						}
+					}
+				}
+				
+				
+			}
+			.phone
+			{
+				width: 143px;
+				height: 47px;
+				padding-top: 15px;
+				margin-left: 50px;
+				.phone_number 
+				{
+					width: 100%;
+					a
+						{
+							text-decoration: none;
+							font-size: 18px;
+							line-height: 28.8px;
+							width: 100%;
+						}
+				}				
+			}
+			.button
+			{
+				width: 100px;
+				text-align: center;
+				margin-top: 33px;
+				margin-left: 30px;
+				span
+				{
+					font-weight: 500;
+					font-size: 14px;
+					color: #FFFFFF;
+					background: #34AADD;
+					padding: 13px 30px;
+				}
+			}
+		}
+		&_bottom
+		{
+			height: 60px;
+			width: 100%;
+		}
+	}
+}
+
+// .max
+// {
+// 	width: 1000px;
+// }
 
 
 @import "media";
