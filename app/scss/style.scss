@@ -19,6 +19,36 @@ h1
 	text-transform: uppercase;
 }
 
+h3
+{
+	line-height: 25.2px;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.button
+{
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	border: 1px solid;
+	border-radius: 5px;
+
+	span
+	{
+		display: block;
+		font-weight: 500;
+		font-size: 14px;
+		padding: 13px 30px;
+	}
+}
+
+.color_blue
+{
+	color: #FFFFFF;
+	border-color: #34AADD;
+}
+
 .color_grey
 {
 	color: #bbc4d6;
@@ -27,7 +57,7 @@ h1
 
 .main_wrapper
 {
-	max-width: 1010px;
+	max-width: 1170px;
 	height: 100vh;
 	margin: 0 auto;
 	padding: 0 135px;
@@ -54,9 +84,10 @@ h1
 			.search
 			{
 				margin-top: 20px;
-				max-width: 500px;
+				// max-width: 500px;
 				min-width: 175px;
-				width: 100%;
+				flex-grow: 1;
+				// width: 100%;
 				// width: 160px;
 				height: 40px;
 				.search_box
@@ -70,7 +101,6 @@ h1
 						height: 36px;
 						position: relative;
 						border: 1px solid #34AADD;
-						// border: 0;
 						border-radius: 5px;
 						padding: 0;
 					}
@@ -118,24 +148,77 @@ h1
 			}
 			.button
 			{
-				width: 100px;
-				text-align: center;
-				margin-top: 33px;
+				margin-top: 20px;
 				margin-left: 30px;
-				span
-				{
-					font-weight: 500;
-					font-size: 14px;
-					color: #FFFFFF;
-					background: #34AADD;
-					padding: 13px 30px;
-				}
+				background: #34aadd;
+				border-color: #34AADD;
 			}
 		}
 		&_bottom
 		{
 			height: 60px;
 			width: 100%;
+
+			.menu
+			{
+				list-style: none;
+				padding: 0;
+				display: flex;
+
+				li
+				{
+					margin-left: 60px;
+					line-height: 28.8px;
+					color: #768298;
+					font-size: 18px;
+				}
+
+				li.selected
+				{
+					color: #F95A59;
+				}
+
+				li:first-child
+				{
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	main
+	{
+		min-height: 500px;
+	}
+
+	.popular
+	{
+		margin: 90px 0;
+
+		&_products
+		{
+			margin-top: 50px;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			.product
+			{
+				width: 270px;
+				border: 1px solid #000;
+				margin-bottom: 30px;
+
+				&_img
+				{
+					height: 174px;
+					width: 100%;
+				}
+
+				&_text
+				{
+					padding: 10px 10px 0 11px;
+				}
+			}
 		}
 	}
 }
