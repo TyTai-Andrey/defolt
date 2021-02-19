@@ -5,7 +5,7 @@
 
 *
 {
-	font-family: Roboto;
+	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	color: #121920;
 	font-weight: 400;
@@ -24,11 +24,11 @@ h3
 	line-height: 25.2px;
 	font-weight: 500;
 	font-size: 18px;
+	margin: 0;
 }
 
 .button
 {
-	width: 100px;
 	height: 40px;
 	text-align: center;
 	border: 1px solid;
@@ -39,15 +39,36 @@ h3
 		display: block;
 		font-weight: 500;
 		font-size: 14px;
+		line-height: 14px;
 		padding: 13px 30px;
 	}
 }
 
-.color_blue
+.button.color_blue
 {
+	background: #34aadd;
+	border-color: #34AADD;
+
+	span
+	{
 	color: #FFFFFF;
 	border-color: #34AADD;
+	}
 }
+
+.button.color_white
+{
+	background: #FFFFFF;
+	border-color: #34AADD;
+
+	span
+	{
+	color: #34AADD;
+	border-color: #34AADD;
+	}
+}
+
+
 
 .color_grey
 {
@@ -150,8 +171,6 @@ h3
 			{
 				margin-top: 20px;
 				margin-left: 30px;
-				background: #34aadd;
-				border-color: #34AADD;
 			}
 		}
 		&_bottom
@@ -164,10 +183,11 @@ h3
 				list-style: none;
 				padding: 0;
 				display: flex;
+				max-width: 783px;
+				justify-content: space-between;
 
 				li
 				{
-					margin-left: 60px;
 					line-height: 28.8px;
 					color: #768298;
 					font-size: 18px;
@@ -176,11 +196,6 @@ h3
 				li.selected
 				{
 					color: #F95A59;
-				}
-
-				li:first-child
-				{
-					margin-left: 0;
 				}
 			}
 		}
@@ -205,22 +220,128 @@ h3
 			.product
 			{
 				width: 270px;
-				border: 1px solid #000;
 				margin-bottom: 30px;
+				margin-right: 15px;
 
 				&_img
 				{
 					height: 174px;
 					width: 100%;
+					background-size: cover;
+				}
+
+				&_text_box
+				{
+					width: 249px;
+					padding: 10px 0 10px 10px;
 				}
 
 				&_text
+				{	
+					height: 121px;
+
+					h3
+					{
+						margin-bottom: 5px;
+					}
+
+					&_description
+					{
+						color: #768298;
+						font-weight: 400;
+					}
+				}
+				
+				&_footer
 				{
-					padding: 10px 10px 0 11px;
+					height: 60px;
+					display: flex;
+					justify-content: space-between;
+					margin-top: 7px;
+
+					.price
+					{
+						margin-top: 7px;
+
+						&_box
+						{
+							height: 21px;
+
+							.price_old
+							{
+								line-height: 19.6px;
+								color: #768298;
+							}
+
+							span
+							{	
+								display: block;
+								height: 2px;
+								width: 100%;
+								background: #f95a59;
+								transform: translateY(-10px) rotate(23.63deg);
+							}
+						}
+
+						&_new
+						{
+							font-size: 16px;
+							font-weight: 700;
+							height: 22px;
+						}
+					}
+
+					.buy_icon
+					{
+						width: 26px;
+						height: 26px;
+						padding: 12px;
+						background: #34AADD;
+						border-radius: 6px;
+						box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.05), 2px 2px 8px rgba(0, 0, 0, 0.05);
+					}
+				}
+			}
+			.product:last-child
+			{
+				margin-right: 0;
+			}
+		}
+
+		.button
+		{
+			width: 205px;
+
+			span
+			{
+				display: flex;
+
+				.arrow
+				{	
+					width: 15.3px;
+					height: 13.8px;
+					padding: 0 0 0 10px;
 				}
 			}
 		}
 	}
+}
+
+#first_element .product_img
+{
+	background-image: url(https://avatars.mds.yandex.net/get-zen_doc/1581470/pub_5f0eeb696fe55550572a8397_5f0ef5cfeab2774149bd7cb6/scale_1200);
+}
+#second_element .product_img
+{
+	background-image: url(https://s1.1zoom.ru/b5050/118/353170-admin_1920x1200.jpg);
+}
+#third_element .product_img
+{
+	background-image: url(https://w-dog.ru/wallpapers/10/0/443944590590976/krasivye-greenlands-gialinovye-ozero-vysokie-gory-sneg-prozrachnoe-ozero-otrazhenie-nebo-belye-oblaka.jpg);
+}
+#fourth_element .product_img
+{
+	background-image: url(https://bipbap.ru/wp-content/uploads/2017/09/2560x1600_623139_www.ArtFile.ru_.jpg);
 }
 
 // .max
