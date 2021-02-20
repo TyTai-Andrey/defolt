@@ -16,6 +16,7 @@ h1
 	line-height: 57.6px;
 	font-weight: 500;
 	font-size: 36px;
+	margin: 0;
 	text-transform: uppercase;
 }
 
@@ -34,13 +35,14 @@ h3
 	border: 1px solid;
 	border-radius: 5px;
 
-	span
+	a
 	{
 		display: block;
 		font-weight: 500;
 		font-size: 14px;
 		line-height: 14px;
 		padding: 13px 30px;
+		text-decoration: none;
 	}
 }
 
@@ -49,10 +51,10 @@ h3
 	background: #34aadd;
 	border-color: #34AADD;
 
-	span
+	a
 	{
-	color: #FFFFFF;
-	border-color: #34AADD;
+		color: #FFFFFF;
+		border-color: #34AADD;
 	}
 }
 
@@ -61,10 +63,10 @@ h3
 	background: #FFFFFF;
 	border-color: #34AADD;
 
-	span
+	a
 	{
-	color: #34AADD;
-	border-color: #34AADD;
+		color: #34AADD;
+		border-color: #34AADD;
 	}
 }
 
@@ -79,21 +81,21 @@ h3
 .main_wrapper
 {
 	max-width: 1170px;
-	height: 100vh;
 	margin: 0 auto;
 	padding: 0 135px;
+}
 
-	.header
+.header
+{
+	width: 100%;
+	height: 140px;
+	margin: 0 auto;
+	&_top
 	{
+		height: 80px;
 		width: 100%;
-		height: 140px;
-		margin: 0 auto;
-		&_top
-		{
-			height: 80px;
-			width: 100%;
-			display: flex;
-			flex-direction: row;
+		display: flex;
+		flex-direction: row;
 			// justify-content: space-between;
 			.logo
 			{
@@ -159,12 +161,12 @@ h3
 				{
 					width: 100%;
 					a
-						{
-							text-decoration: none;
-							font-size: 18px;
-							line-height: 28.8px;
-							width: 100%;
-						}
+					{
+						text-decoration: none;
+						font-size: 18px;
+						line-height: 28.8px;
+						width: 100%;
+					}
 				}				
 			}
 			.button
@@ -228,6 +230,45 @@ h3
 					height: 174px;
 					width: 100%;
 					background-size: cover;
+					padding-top: 10px;
+
+					.marks
+					{
+						height: 28px;
+						width: 217px;
+						margin: 0 0 0 10px;
+						display: flex;
+
+						.mark_text
+						{
+							color: #fff;
+							padding: 3px 10px;
+							line-height: 22.4px;
+							text-align: center;
+							border-radius: 3px;
+							margin-right: 3px;
+						}
+
+						.action
+						{
+							background: #fac300;
+						}
+
+						.hit
+						{
+							background: #dc2c53;
+						}
+
+						.best_price
+						{
+							background: #a7507b;
+						}
+
+						.mark_text:last-child
+						{
+							margin-right: 0;
+						}
+					}
 				}
 
 				&_text_box
@@ -308,15 +349,15 @@ h3
 			}
 		}
 
-		.button
+		.button.color_white
 		{
 			width: 205px;
 
-			span
+			a
 			{
 				display: flex;
 
-				.arrow
+				svg
 				{	
 					width: 15.3px;
 					height: 13.8px;
@@ -325,29 +366,127 @@ h3
 			}
 		}
 	}
-}
 
-#first_element .product_img
-{
-	background-image: url(https://avatars.mds.yandex.net/get-zen_doc/1581470/pub_5f0eeb696fe55550572a8397_5f0ef5cfeab2774149bd7cb6/scale_1200);
-}
-#second_element .product_img
-{
-	background-image: url(https://s1.1zoom.ru/b5050/118/353170-admin_1920x1200.jpg);
-}
-#third_element .product_img
-{
-	background-image: url(https://w-dog.ru/wallpapers/10/0/443944590590976/krasivye-greenlands-gialinovye-ozero-vysokie-gory-sneg-prozrachnoe-ozero-otrazhenie-nebo-belye-oblaka.jpg);
-}
-#fourth_element .product_img
-{
-	background-image: url(https://bipbap.ru/wp-content/uploads/2017/09/2560x1600_623139_www.ArtFile.ru_.jpg);
-}
+	.new
+	{
+		background: #f0f0f0;
+		padding: 50px 0;
 
-// .max
-// {
-// 	width: 1000px;
-// }
+		.new_boxes
+		{
+			max-width: 1170px;
+			margin-top: 50px;
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-between;
+			
+			.box
+			{	
+				border-radius: 6px;
+				margin: 0 30px 30px 0;
+				// margin-right: 10px;
+			}
+			
+			.box_l 
+			{
+				width: 369px;
+				height: 369px;
+			}
+
+			.box_b
+			{
+				max-width: 770px;
+				min-width: 369px;
+				width: 100%;
+				height: 369px;
+			}
+
+			.box_first
+			{
+				background: #34AADD;
+				grid-area: post-1;
+			}
+			.box_second
+			{
+				background: #A7507B;
+				grid-area: post-2;
+				margin-right: 0;
+			}
+			.box_third
+			{
+				background: #6680AE;
+				grid-area: post-3;
+			}
+			.box_fourth
+			{
+				background: #F95A59;
+				grid-area: post-4;
+				margin-right: 0;
+			}
+		}
+	}
+
+	#first_element .product_img
+	{
+		background-image: url(https://avatars.mds.yandex.net/get-zen_doc/1581470/pub_5f0eeb696fe55550572a8397_5f0ef5cfeab2774149bd7cb6/scale_1200);
+	}
+	#second_element .product_img
+	{
+		background-image: url(https://s1.1zoom.ru/b5050/118/353170-admin_1920x1200.jpg);
+	}
+	#third_element .product_img
+	{
+		background-image: url(https://w-dog.ru/wallpapers/10/0/443944590590976/krasivye-greenlands-gialinovye-ozero-vysokie-gory-sneg-prozrachnoe-ozero-otrazhenie-nebo-belye-oblaka.jpg);
+	}
+	#fourth_element .product_img
+	{
+		background-image: url(https://bipbap.ru/wp-content/uploads/2017/09/2560x1600_623139_www.ArtFile.ru_.jpg);
+	}
+
+
+	@media (min-width: 1440px) {
+		.box_second
+		{
+			margin-right: 0;
+		}
+		.box_fourth
+		{
+			margin-right: 0;
+		}
+	}
+
+
+	@media (max-width: 1455px) {
+		.box_first
+		{
+			order: -2;
+		}
+		.new .new_boxes .box_fourth
+		{
+			order: -1;
+			margin-right: 0;
+		}
+		.new .new_boxes
+		{
+			// width: 775px;
+			justify-content: left;
+		}
+		.box_second
+		{
+			margin-right: 0;
+		}
+		.new .new_boxes .box_third
+		{
+			margin-right: 0;
+		}
+
+	}
+.max
+{
+	width: 1000px;
+}
 
 
 @import "media";
