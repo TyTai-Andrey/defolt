@@ -1,9 +1,39 @@
 
-@media (max-width: 600px)
+
+@media (max-width: 1180px)
 {
-	.our_partners .main_wrapper .partners .partner:nth-child(1n)	
+	.new .new_boxes .bg_box	
 	{
-		margin-right: 0px;
+		width: 369px;
+		flex: none;
+	}
+
+	.new .new_boxes
+	{
+		justify-content: center;
+	}
+
+	h1
+	{
+		text-align: center;
+	}
+
+
+}
+
+@media (max-width: 1439px) 
+{
+	.our_partners .main_wrapper .partners .partner:last-child	
+	{
+		margin-left: 30px;
+	}
+	.our_partners h1
+	{
+		text-align: center;
+	}
+	.our_partners .main_wrapper .partners
+	{
+		justify-content: center;
 	}
 }
 @media (min-width: 840px) and (max-width: 1139px) 
@@ -12,6 +42,7 @@
 	{
 		margin-right: 0px;
 	}
+	
 }
 @media (min-width: 1140px) and (max-width: 1439px) 
 {
@@ -20,52 +51,189 @@
 		margin-right: 0px;
 	}
 }
-@media (max-width: 1440px)
+@media (min-width: 1440px)
 {
 	.our_partners .main_wrapper .partners .partner:nth-child(4n)	
 	{
 		margin-right: 0px;
 	}
 }
-@media (max-width: 1140px) 
+
+
+@media (min-width: 1455px) 
 {
-	.our_partners .main_wrapper .partners .partner:nth-child(3n)	
+	.new .new_boxes .bg_box
 	{
-		margin-right: 0px;
+		width: 770px;
+		height: 369px;
+		flex: none;
+	}
+}
+@media (max-width: 1038px) 
+{
+	.new .new_boxes .bg_box
+	{
+		margin: 0 0 30px 0;
+	}
+	.new .new_boxes .box.box_l
+	{
+		margin: 0 0 30px 0;
+	}
+	.new .new_boxes
+	{
+		flex-direction: column;
+		align-items: center;
+	}
+	.new .button.color_white
+	{
+		margin: 0 auto;
+	}
+	.new .button.color_white span img
+	{
+		display: none;
+	}
+}
+@media (max-width: 839px) 
+{
+	.our_partners .main_wrapper .partners .partner:last-child	
+	{
+		margin-left: 0px;
+	}
+
+	.popular .popular_products .product
+	{
+		margin-left: 0;
+	}
+	.popular .popular_products
+	{
+		flex-direction: column;
+		align-items: center;
+	}
+	.popular .button.color_white
+	{
+		margin: 0 auto;
+	}
+	.popular .button.color_white span img
+	{
+		display: none;
+	}
+	.header_top .logo
+	{
+		margin-left: 15px;
 	}
 }
 
-// @media (min-width: 1440px) 
-// {
-// 	.our_partners .main_wrapper .partners .partner:nth-child(1n)	
-// 	{
-// 		margin-right: 0px;
-// 	}
-// }
+@media (max-width: 1260px) 
+{
+	footer .main_wrapper .footer .button.color_blue
+	{	
+		display: none;
+		position: fixed;
+		right: 30px;
+		bottom: 30px;
+	}
+}
 
+@media (max-width: 1010px) {
+	footer .main_wrapper
+	{
+		margin: 0 auto;
+		padding: 0;
+	}
+	.header .main_wrapper
+	{
+		margin: 0 auto;
+		padding: 0;
+	}
+	.header .main_wrapper .header_top
+	{
+		margin: 0 auto;
+		max-width: 823px;
+		padding: 0 0px;
+	}
+	.header .main_wrapper .header_bottom
+	{
+		margin: 0 auto;
+		max-width: 823px;
+		padding: 0 0px;
+	}
+	footer .main_wrapper .footer .footer_bar
+	{
+		margin: 0 auto;
+	}
 
-// 	@media (max-width: 1455px) {
-// 		.box_first
-// 		{
-// 			order: -2;
-// 		}
-// 		.new .new_boxes .box_fourth
-// 		{
-// 			order: -1;
-// 			margin-right: 0;
-// 		}
-// 		.new .new_boxes
-// 		{
-// 			// width: 775px;
-// 			justify-content: left;
-// 		}
-// 		.box_second
-// 		{
-// 			margin-right: 0;
-// 		}
-// 		.new .new_boxes .box_third
-// 		{
-// 			margin-right: 0;
-// 		}
+}
+@media (max-width: 680px) {
+	.main_wrapper
+	{
+		margin: 0 auto;
+		padding: 0;
+	}
+	.our_partners .main_wrapper .partners .partner	
+	{
+		margin: 0 0 5px 10px;
+	}
+}
+@media (max-width: 880px)
+{
+	.header .main_wrapper .header_bottom
+	{
+		display: none;
+	}
+	.header .main_wrapper .button.color_blue
+	{
+		display: none;
+	}
+	.header .main_wrapper .phone
+	{
+		display: none;
+	}
+	.header_top .search
+	{
+		margin-right: 15px;
+	}
+	.footer_menu ol
+	{
+		display: none;
+	}
+	footer .main_wrapper .footer .footer_bar .footer_bar_ul li:nth-child(4)
+	{
+		display: none;
+	}
+	footer .main_wrapper .footer .footer_bar .footer_bar_ul
+	{
+		justify-content: center;
+	}
+} 
 
-// 	}
+@media (max-width: 405px)
+{
+	.new .new_boxes .box.box_l
+	{
+		width: 300px;
+		height: 300px;
+	}
+	.new .new_boxes .bg_box
+	{
+		width: 300px;
+		min-width: 300px;
+		height: 300px;
+	}
+	.new .new_boxes .box_b .text_box
+	{
+		margin-left: 10px;
+	}
+	.new .new_boxes .box_l .text_box
+	{
+		margin-left: 10px;
+	}
+	// .new .new_boxes .box_b
+	// {
+		// width: 300px;
+		// height: 300px;
+	// }
+	.header_top .search
+	{
+		display: none;
+	}
+}
